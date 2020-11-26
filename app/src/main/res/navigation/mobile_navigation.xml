@@ -22,4 +22,10 @@
         android:name="com.deepsingh44.vishufirsthelloapp.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_order"
+        android:name="com.deepsingh44.vishufirsthelloapp.ui.order.OrderFragment"
+        android:label="OrderFragment" />
+
 </navigation>

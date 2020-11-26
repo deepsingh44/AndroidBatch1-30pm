@@ -26,8 +26,7 @@ public class MenuExample extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_example);
 
-        BoomButton bmb=findViewById(R.id.bmb);
-
+        BoomButton bmb = findViewById(R.id.bmb);
 
         /*arcMenu = (ArcMenu) findViewById(R.id.arcmenu_android_example_layout);
         arcMenu.setStateChangeListener(new StateChangeListener() {

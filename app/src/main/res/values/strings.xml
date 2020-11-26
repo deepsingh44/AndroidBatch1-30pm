@@ -17,6 +17,7 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_gallery">About Us</string>
+    <string name="menu_slideshow">List Of Product</string>
+    <string name="menu_order">Order</string>
 </resources>
