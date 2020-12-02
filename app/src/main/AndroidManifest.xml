@@ -12,20 +12,21 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".MenuExample">
-
-        </activity>
-        <activity
-            android:name=".HomePage"
-            android:label="@string/title_activity_home_page"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".MyServiceTutorial">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TabbesActivityDemo"></activity>
+        <activity android:name=".MenuExample"></activity>
+        <activity
+            android:name=".HomePage"
+            android:label="@string/title_activity_home_page"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity android:name=".TabbesActivityDemo" />
         <activity android:name=".FragmentDemo" />
         <activity android:name=".WebViewDemo" />
         <activity android:name=".RegisterPage" />
@@ -33,6 +34,8 @@
         <activity
             android:name=".SplashPage"
             android:theme="@style/deepfullscreen" />
+
+        <service android:name=".MySystemLevelService"/>
     </application>
 
 </manifest>

@@ -20,4 +20,5 @@
     <string name="menu_gallery">About Us</string>
     <string name="menu_slideshow">List Of Product</string>
     <string name="menu_order">Order</string>
+    <string name="menu_logout">Logout</string>
 </resources>

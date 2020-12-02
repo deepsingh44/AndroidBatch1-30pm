@@ -1,6 +1,8 @@
 package com.deepsingh44.vishufirsthelloapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 
@@ -38,7 +40,22 @@ public class HomePage extends AppCompatActivity {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
 
-        BottomNavigationView bottomNavigationView=findViewById(R.id.bottomnavigation);
+        navigationView.getMenu().findItem(R.id.logout).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                logout();
+                return false;
+            }
+        });
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomnavigation);
+        bottomNavigationView.getMenu().findItem(R.id.logout).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                logout();
+                return false;
+            }
+        });
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
@@ -50,6 +67,12 @@ public class HomePage extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
 
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
+    }
+
+    private void logout() {
+        Intent intent = new Intent(HomePage.this, LoginPage.class);
+        startActivity(intent);
+        finish();
     }
 
     @Override
