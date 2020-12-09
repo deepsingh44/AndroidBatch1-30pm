@@ -6,7 +6,8 @@
     <uses-permission-sdk-23 android:name="android.permission.INTERNET" />
     <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission-sdk-23 android:name="android.permission.READ_EXTERNAL_STORAGE" />
-<uses-permission-sdk-23 android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -18,17 +19,17 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".CustomBroadCast">
+        <activity android:name=".DatabaseTutorial">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BroadcastTutorial">
-
+        <activity android:name=".CustomBroadCast">
         </activity>
-        <activity android:name=".IntentServiceExample"></activity>
+        <activity android:name=".BroadcastTutorial"></activity>
+        <activity android:name=".IntentServiceExample" />
         <!--
  <receiver android:name=".BroadCastDemo">
             <intent-filter>
@@ -54,7 +55,7 @@
             android:name=".SplashPage"
             android:theme="@style/deepfullscreen" />
 
-        <service android:name=".Location"/>
+       <!-- <service android:name=".Location" />-->
     </application>
 
 </manifest>

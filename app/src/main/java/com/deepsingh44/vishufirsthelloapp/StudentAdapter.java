@@ -30,7 +30,7 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.MyViewHo
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Student student = students.get(position);
         holder.tname.setText(student.getName());
-        holder.temail.setText(student.getEmail());
+        //holder.temail.setText(student.getEmail());
     }
 
     @Override
