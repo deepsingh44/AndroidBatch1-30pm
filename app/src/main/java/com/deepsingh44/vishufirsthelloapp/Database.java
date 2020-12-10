@@ -69,7 +69,7 @@ public class Database extends SQLiteOpenHelper {
         return getWritableDatabase().insert(TABLE_NAME, null, cv);
     }
 
-    //fetch data
+    //fetch all data
     public List<Student> getAllStudents() {
         List<Student> students = new ArrayList<>();
         Cursor cursor = getReadableDatabase().query(TABLE_NAME, null, null, null, null, null, null);
@@ -81,6 +81,33 @@ public class Database extends SQLiteOpenHelper {
             students.add(student);
         }
         return students;
+    }
+
+    //fetch single data
+    public Student getStudent(int roll) {
+        Student student = null;
+        Cursor cursor = getReadableDatabase().query(TABLE_NAME, null, "" + ROll + "=?", new String[]{String.valueOf(roll)}, null, null, null);
+        if (cursor.moveToNext()) {
+            student = new Student();
+            student.setRoll(cursor.getInt(0));
+            student.setName(cursor.getString(1));
+            student.setMarks(cursor.getFloat(2));
+        }
+        return student;
+    }
+
+    //update data
+    public long update(Student student) {
+        ContentValues cv = new ContentValues();
+        cv.put(ROll, student.getRoll());
+        cv.put(NAME, student.getName());
+        cv.put(MARKS, student.getMarks());
+        return getWritableDatabase().update(TABLE_NAME, cv, "" + ROll + "=?", new String[]{String.valueOf(student.getRoll())});
+    }
+
+    //delete data
+    public long delete(int roll) {
+        return getWritableDatabase().delete(TABLE_NAME, "" + ROll + "=?", new String[]{String.valueOf(roll)});
     }
 
 }
